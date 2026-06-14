@@ -1,11 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Eclyptic Music</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eclyptic Music</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+}
+
+header{
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#4DA6FF;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    color:#bdbdbd;
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#4DA6FF;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.section{
+    padding:100px 10%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#151515;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #222;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    border-top:1px solid #222;
+    color:#777;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:42px;
+}
+
+nav{
+    display:none;
+}
+
+}
+</style>
 </head>
-<body style="background:black;color:white;text-align:center;font-family:Arial;padding-top:100px;">
-  <h1>Eclyptic Music</h1>
-  <p>Create. Collaborate. Release.</p>
-  <p>Founded by John Evade</p>
+
+<body>
+
+<header>
+    <div class="logo">Eclyptic<span>Music</span></div>
+
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#community">Community</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>Create. Collaborate. Release.</h1>
+
+        <p>
+            Eclyptic Music is the next-generation music creation platform
+            built for artists, producers, songwriters, and creators.
+            Produce music, collaborate with others, and bring your ideas
+            to life from anywhere.
+        </p>
+
+        <a href="#" class="button">
+            Start Creating Free
+        </a>
+
+    </div>
+</section>
+
+<section class="section" id="features">
+
+<h2>Platform Features</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>🎹 Music Studio</h3>
+<p>Create tracks with professional tools directly in your browser.</p>
+</div>
+
+<div class="card">
+<h3>🎤 Vocal Recording</h3>
+<p>Record vocals, demos, and ideas anytime, anywhere.</p>
+</div>
+
+<div class="card">
+<h3>👥 Collaboration</h3>
+<p>Work with artists and producers in real time.</p>
+</div>
+
+<div class="card">
+<h3>☁ Cloud Projects</h3>
+<p>Access up to 50 projects on the free plan.</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Tools</h3>
+<p>Generate melodies, lyrics, and production ideas.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Publishing</h3>
+<p>Export and release your music with ease.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>About Eclyptic Music</h2>
+
+<div class="about">
+
+<p>
+Founded by John Evade, Eclyptic Music was created to empower musicians,
+artists, and creators with professional-grade music tools that are
+accessible to everyone. Our mission is to remove barriers to creativity
+and provide a platform where anyone can create, collaborate, and share
+their music with the world.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Eclyptic Music • Founded by John Evade
+</p>
+
+</footer>
+
 </body>
 </html>

@@ -47,3 +47,30 @@ border-radius:8px;
 </div>
 </body>
 </html>
+</body><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+
+<script>
+
+async function createAccount(){
+
+const email =
+document.getElementById("email").value;
+
+const password =
+document.getElementById("password").value;
+
+const { error } =
+await supabaseClient.auth.signUp({
+email,
+password
+});
+
+if(error){
+alert(error.message);
+}else{
+alert("Account created!");
+}
+}
+
+</script>

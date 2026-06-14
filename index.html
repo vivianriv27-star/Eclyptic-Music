@@ -3,138 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eclyptic Music</title>
+<title>Eclyptic Music | Create. Collaborate. Release.</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#050505;
-    color:white;
+background:#050505;
+color:white;
 }
 
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 10%;
-    border-bottom:1px solid #222;
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #222;
+z-index:1000;
 }
 
 .logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#4da6ff;
+font-size:30px;
+font-weight:700;
+color:#4da6ff;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:15px;
+}
+
+nav a:hover{
+color:#4da6ff;
 }
 
 .hero{
-    min-height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px;
+background:
+radial-gradient(circle at top,
+#15396b 0%,
+#050505 60%);
 }
 
 .hero h1{
-    font-size:4rem;
-    margin-bottom:20px;
+font-size:5rem;
+max-width:1000px;
+margin-bottom:25px;
 }
 
 .hero p{
-    max-width:700px;
-    color:#bdbdbd;
-    line-height:1.7;
-    font-size:1.2rem;
+max-width:850px;
+font-size:1.25rem;
+line-height:1.8;
+color:#c5c5c5;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
-    background:#4da6ff;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    transition:.3s;
+display:inline-block;
+margin-top:35px;
+padding:16px 40px;
+background:#4da6ff;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
 }
 
 .btn:hover{
-    background:#2d87df;
+transform:translateY(-2px);
 }
 
-.features{
-    padding:100px 10%;
+section{
+padding:100px 10%;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:60px;
-    font-size:2.5rem;
+font-size:3rem;
+text-align:center;
+margin-bottom:60px;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-    background:#111;
-    padding:30px;
-    border-radius:15px;
-    border:1px solid #222;
+background:#0d0d0d;
+border:1px solid #222;
+padding:30px;
+border-radius:16px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#4da6ff;
 }
 
 .card h3{
-    margin-bottom:15px;
-    color:#4da6ff;
+color:#4da6ff;
+margin-bottom:15px;
 }
 
-.about{
-    padding:100px 10%;
-    text-align:center;
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+text-align:center;
 }
 
-.about p{
-    max-width:900px;
-    margin:auto;
-    color:#bdbdbd;
-    line-height:1.8;
+.stat{
+background:#0d0d0d;
+padding:35px;
+border-radius:16px;
+border:1px solid #222;
+}
+
+.stat h2{
+font-size:3rem;
+color:#4da6ff;
+margin-bottom:10px;
+}
+
+.community{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.community p{
+line-height:1.8;
+color:#c5c5c5;
+font-size:1.1rem;
+}
+
+.cta{
+text-align:center;
+background:#0d0d0d;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
 }
 
 footer{
-    border-top:1px solid #222;
-    padding:30px;
-    text-align:center;
-    color:#888;
+padding:40px;
+text-align:center;
+color:#888;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.5rem;
-}
-
-header{
-    flex-direction:column;
+font-size:3rem;
 }
 
 nav{
-    margin-top:15px;
+display:none;
 }
+
+.section-title{
+font-size:2rem;
+}
+
 }
 </style>
 </head>
@@ -142,29 +194,31 @@ nav{
 <body>
 
 <header>
-    <div class="logo">ECLYPTIC MUSIC</div>
+<div class="logo">ECLYPTIC MUSIC</div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav>
+<a href="#features">Features</a>
+<a href="#stats">Stats</a>
+<a href="#community">Community</a>
+<a href="#about">About</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>Create. Collaborate. Release.</h1>
 
-    <p>
-        Eclyptic Music is a next-generation music creation platform founded by John Evade.
-        Record vocals, build beats, collaborate with creators, and bring your ideas to life
-        using powerful cloud-based studio tools.
-    </p>
+<h1>Create. Collaborate. Release.</h1>
 
-    <a href="#" class="btn">Start Creating Free</a>
+<p>
+Eclyptic Music is a next-generation cloud music platform founded by John Evade.
+Build beats, record vocals, collaborate with creators, manage projects,
+and bring your musical vision to life from anywhere.
+</p>
+
+<a href="#" class="btn">Start Creating Free</a>
+
 </section>
 
-<section class="features">
+<section id="features">
 
 <h2 class="section-title">Platform Features</h2>
 
@@ -172,17 +226,17 @@ nav{
 
 <div class="card">
 <h3>Music Studio</h3>
-<p>Create songs using a modern browser-based production environment.</p>
+<p>Create music using powerful browser-based production tools.</p>
 </div>
 
 <div class="card">
 <h3>Cloud Projects</h3>
-<p>Access your music from anywhere with secure cloud storage.</p>
+<p>Access your work anytime with secure cloud storage.</p>
 </div>
 
 <div class="card">
 <h3>Collaboration</h3>
-<p>Work with artists and producers in real time.</p>
+<p>Work with artists, producers, and songwriters in real time.</p>
 </div>
 
 <div class="card">
@@ -190,30 +244,103 @@ nav{
 <p>Generate ideas, melodies, and creative inspiration faster.</p>
 </div>
 
+<div class="card">
+<h3>Vocal Recording</h3>
+<p>Record vocals directly through your browser.</p>
+</div>
+
+<div class="card">
+<h3>Marketplace</h3>
+<p>Sell beats, loops, and creative services to the community.</p>
+</div>
+
 </div>
 
 </section>
 
-<section class="about">
+<section id="stats">
+
+<h2 class="section-title">Built For Creators</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>50+</h2>
+<p>Free Projects</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Cloud Access</p>
+</div>
+
+<div class="stat">
+<h2>∞</h2>
+<p>Creative Potential</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<h2 class="section-title">Community</h2>
+
+<div class="community">
+
+<p>
+Join a growing network of artists, producers, and creators.
+Eclyptic Music is designed to bring creative minds together
+through collaboration, innovation, and limitless musical expression.
+</p>
+
+</div>
+
+</section>
+
+<section id="about">
 
 <h2 class="section-title">About Eclyptic Music</h2>
 
+<div class="community">
+
 <p>
-Eclyptic Music is an innovative music creation and collaboration platform developed under
-Eclyptic Studios and founded by John Evade. Our mission is to empower artists, producers,
-songwriters, and creators with professional tools that make music creation accessible,
-collaborative, and limitless.
+Developed under Eclyptic Studios and founded by John Evade,
+Eclyptic Music is built to empower creators with professional-grade tools
+for producing, sharing, and collaborating on music from anywhere in the world.
+Our mission is simple: remove barriers and unlock creativity.
 </p>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2 class="section-title">Start Your Journey</h2>
+
+<p>
+Create your first project and experience the future of music creation.
+</p>
+
+<br>
+
+<a href="#" class="btn">Create Free Account</a>
 
 </section>
 
 <footer>
-© 2026 Eclyptic Music • Founded by John Evade
+
+<p><strong>Eclyptic Music</strong></p>
+<p>A Product of Eclyptic Studios</p>
+<p>Founded by John Evade</p>
+
+<br>
+
+<p>© 2026 Eclyptic Music. All Rights Reserved.</p>
+
 </footer>
 
 </body>
 </html>
-background:
-radial-gradient(circle at top,
-#14213d,
-#050505 60%);
